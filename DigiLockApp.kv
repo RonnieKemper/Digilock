@@ -1,0 +1,219 @@
+# Creating the main .kv files 
+# the difference is that it is 
+# the heart of the Application 
+# Other are just Organs 
+#.kv file of main.py file 
+#.kv file of main.py file 
+  
+#: import CheckBox kivy.uix.checkbox
+
+# giving colour to lable   
+#: import CheckBox kivy.uix.checkbox
+# <DigiLock>:
+#.kv file of main.py file 
+  
+#: import CheckBox kivy.uix.checkbox
+
+# giving colour to lable 
+<CustLabel@Label>: 
+    color: .420, .620, .910, 1
+<ScreenManagement>:
+    id: sm
+<SettingsScreen>:
+
+
+<ActionsScreen>: 
+ 
+<AccountsScreenApp>:  
+
+    id: thePanel
+    size_hint: 1, 1 
+    background_color: .120, .180, .273, 1
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    do_default_tab: False
+    
+    TabbedPanelItem:
+        id: tab1
+        text: 'actions'
+        StackLayout:
+            id: container
+            size_hint_y: None
+            ScrollView:
+                size_hint: (1, .9)
+                bar_width: 10
+                bar_color: 1, 0, 0, 1   # red
+                bar_inactive_color: 0, 0, 1, 1   # blue
+                effect_cls: "ScrollEffect"
+                scroll_type: ['bars']
+                GridLayout:
+                    id: accounts
+                    cols: 1
+                    size_hint_y: None
+                    siz_hint_x: None
+                    background_color: .120, .180, .273, 1
+                    BoxLayout:
+                        Button:
+                            text: 'log in'
+                            on_press: app.Loginpressed()
+                        Button:
+                            text: 'reset passwords'
+                            on_press: root.ResetWebAccountPasswords()
+                        Button:
+                            text: 'settings'
+                            on_press: root.switchtosettingsscreen()
+                        Button: 
+                            text: 'login all'
+                        Button:
+                            text: 'Create Folder'
+                            on_press: root.createfolder() #thePanel.do_tab_toggle()
+                        Button:
+                            text: 'move selected'
+                            on_press: root.moveto()
+                        Button: 
+                            text: 'del selected'
+                            on_press: root.deleteAccounts()
+
+    # Creating AnchorLayout 
+    TabbedPanelItem:
+        id:tab5
+        text: 'Emails'
+        StackLayout:
+            id: container
+            size_hint_y: None
+            ScrollView:
+                size_hint: (1, .9)
+                bar_width: 8
+                bar_color: 1, 0, 0, 1   # red
+                bar_inactive_color: 0, 0, 1, 1   # blue
+                effect_cls: "ScrollEffect"
+                scroll_type: ['bars']
+                GridLayout:
+                    id: accounts
+                    cols: 3
+                    size_hint_y: None
+                    siz_hint_x: None               
+                    Emails: 
+                 
+                 
+    TabbedPanelItem:
+        id:tab5
+        text: 'Legal'  
+        StackLayout:
+            id: container
+            size_hint_y: None
+            ScrollView:
+                size_hint: (1, .9)
+                bar_width: 8
+                bar_color: 1, 0, 0, 1   # red
+                bar_inactive_color: 0, 0, 1, 1   # blue
+                effect_cls: "ScrollEffect"
+                scroll_type: ['bars']
+                GridLayout:
+                    id: accounts
+                    cols: 3
+                    size_hint_y: None
+                    siz_hint_x: None 
+                    Legal: 
+
+    TabbedPanelItem:
+        id:tab5
+        text: 'Financial'  
+        StackLayout:
+            id: container
+            size_hint_y: None
+            ScrollView:
+                size_hint: (1, .9)
+                bar_width: 8
+                bar_color: 1, 0, 0, 1   # red
+                bar_inactive_color: 0, 0, 1, 1   # blue
+                effect_cls: "ScrollEffect"
+                scroll_type: ['bars']
+                GridLayout:
+                    id: accounts
+                    cols: 3
+                    size_hint_y: None
+                    siz_hint_x: None 
+                    Financial: 
+
+    TabbedPanelItem:
+        id:tab5
+        text: 'SocialMedia'  
+        StackLayout:
+            id: container
+            size_hint_y: None
+            ScrollView:
+                size_hint: (1, .9)
+                bar_width: 8
+                bar_color: 1, 0, 0, 1   # red
+                bar_inactive_color: 0, 0, 1, 1   # blue
+                effect_cls: "ScrollEffect"
+                scroll_type: ['bars']
+                GridLayout:
+                    id: accounts
+                    cols: 3
+                    size_hint_y: None
+                    siz_hint_x: None 
+                    Socialmedia:
+
+    TabbedPanelItem:
+        id:tab5
+        text: 'Games'  
+        StackLayout:
+            id: container
+            size_hint_y: None
+            ScrollView:
+                size_hint: (1, .9)
+                bar_width: 8
+                bar_color: 1, 0, 0, 1   # red
+                bar_inactive_color: 0, 0, 1, 1   # blue
+                effect_cls: "ScrollEffect"
+                scroll_type: ['bars']
+                GridLayout:
+                    id: accounts
+                    cols: 3
+                    size_hint_y: None
+                    siz_hint_x: None 
+                    Games:                        
+
+    TabbedPanelItem:
+        id:tab5
+        text: 'Blogs'  
+        StackLayout:
+            id: container
+            size_hint_y: None
+            ScrollView:
+                size_hint: (1, .9)
+                bar_width: 8
+                bar_color: 1, 0, 0, 1   # red
+                bar_inactive_color: 0, 0, 1, 1   # blue
+                effect_cls: "ScrollEffect"
+                scroll_type: ['bars']
+                GridLayout:
+                    id: accounts
+                    cols: 3
+                    size_hint_y: None
+                    siz_hint_x: None
+                    Blogs:
+
+    TabbedPanelItem:
+        id: all
+        text: 'all' 
+
+        StackLayout:
+            id: container
+            ScrollView:
+                size_hint: (1, .9)
+                bar_width: 10
+                bar_color: 1, 0, 0, 1   # red
+                bar_inactive_color: 0, 0, 1, 1   # blue
+                effect_cls: "ScrollEffect"
+                scroll_type: ['bars']
+                GridLayout:
+                    id: accounts
+                    cols: 3
+                    spacing: 0, 0
+                    padding: 0, 0
+                    size_hint_y: 11
+                    siz_hint_x: None
+                    All: 
+                            
