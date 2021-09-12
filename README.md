@@ -7,5 +7,5 @@
  
  in order to run it, you have to install python 3.8, configure env variables and all of the dependant libraries stated by the import statements in Digilock.py file, also make  sure the chrome driver is same version as browser.
  
-I really only created this for something to put on a resume... it took a lot of work, was very fun... I am aware it's not the greatest quality code and I can do much better if I was getting paid.
+I really only created this for something to put on a resume... it took a lot of work, was very fun... I am aware it's not the greatest quality code and I can do much better. 
 
